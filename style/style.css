@@ -144,12 +144,14 @@ nav {
 }
 
 .hero {
-  background-image: url("../img/IMG_1135.png");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.25)), to(transparent)), url("../img/IMG_1135.png");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent), url("../img/IMG_1135.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   position: relative;
   min-height: 60vh;
   overflow: hidden;
+  margin-left: 9rem;
 }
 
 .hero-wrapper {
@@ -168,6 +170,7 @@ nav {
 .hero-path-overlay {
   position: absolute;
   bottom: -5%;
+  left: -1px;
 }
 
 .hero-text {
@@ -201,6 +204,7 @@ nav {
   width: 50rem;
   border-radius: 1rem;
   padding: 2rem 4rem;
+  margin-bottom: 4rem;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
@@ -221,5 +225,72 @@ nav {
 .work-card h4,
 .work-card p {
   margin-bottom: 2rem;
+}
+
+.showcase {
+  background-color: #ecfffb;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+          clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+  margin-bottom: 4rem;
+}
+
+.showcase-wrapper {
+  width: 90%;
+  margin: auto;
+  height: 90vh;
+  margin-left: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+.showcase-card {
+  background-color: white;
+  height: 55%;
+  width: 35%;
+  padding: 2rem;
+  margin: 0 6rem;
+  border-radius: 1rem;
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.showcase-card h3,
+.showcase-card p {
+  color: #2c2c2c;
+  margin-bottom: 3rem;
+}
+
+.showcase1 {
+  margin-bottom: 20rem;
+}
+
+.showcase3 {
+  margin-top: 20rem;
 }
 /*# sourceMappingURL=style.css.map */

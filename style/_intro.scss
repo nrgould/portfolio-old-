@@ -11,9 +11,6 @@ nav {
 	color: $prim-text-color;
 }
 
-.nav-wrapper {
-}
-
 .nav-links {
 	@include flex(space-evenly, center, column);
 	flex: 1;
@@ -39,12 +36,14 @@ nav {
 
 //HERO
 .hero {
-	background-image: url("../img/IMG_1135.png");
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent),
+		url("../img/IMG_1135.png");
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 	position: relative;
 	min-height: 60vh;
 	overflow: hidden;
+	margin-left: 9rem;
 }
 
 .hero-wrapper {
@@ -60,6 +59,7 @@ nav {
 .hero-path-overlay {
 	position: absolute;
 	bottom: -5%;
+	left: -1px;
 }
 
 .hero-text {

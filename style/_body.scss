@@ -14,6 +14,7 @@
 	width: 50rem;
 	border-radius: 1rem;
 	padding: 2rem 4rem;
+	margin-bottom: 4rem;
 	@include shadow();
 	@include flex(space-around, center, column);
 	h2,
@@ -21,4 +22,47 @@
 	p {
 		margin-bottom: 2rem;
 	}
+}
+
+//SHOWCASE SECTION
+.showcase {
+	background-color: $prim-text-color;
+	// transform: rotateZ(20deg);
+	position: relative;
+	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+	margin-bottom: 4rem;
+}
+.showcase-wrapper {
+	width: 90%;
+	margin: auto;
+	height: 90vh;
+	margin-left: 9rem;
+	@include flex(center, center, row);
+	overflow: hidden;
+}
+
+.showcase-card {
+	background-color: white;
+	height: 55%;
+	width: 35%;
+	padding: 2rem;
+	margin: 0 6rem;
+	border-radius: 1rem;
+	text-align: center;
+	// transform: rotateZ(-20deg);
+	h3,
+	p {
+		color: $grey-text;
+		margin-bottom: 3rem;
+	}
+	@include shadow();
+	@include flex(space-around, center, column);
+}
+
+.showcase1 {
+	margin-bottom: 20rem;
+}
+
+.showcase3 {
+	margin-top: 20rem;
 }
