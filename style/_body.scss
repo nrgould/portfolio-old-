@@ -1,0 +1,24 @@
+//WORK SECTION
+
+.work {
+	h1 {
+		margin: 0 0 4rem 12rem;
+	}
+}
+.work-wrapper {
+	width: 80%;
+	margin: auto;
+}
+.work-card {
+	background-color: $dark-card-color;
+	width: 50rem;
+	border-radius: 1rem;
+	padding: 2rem 4rem;
+	@include shadow();
+	@include flex(space-around, center, column);
+	h2,
+	h4,
+	p {
+		margin-bottom: 2rem;
+	}
+}

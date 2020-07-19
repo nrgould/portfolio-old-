@@ -1,0 +1,68 @@
+//NAV
+
+nav {
+	height: 100%;
+	width: 9rem;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: $dark-card-color;
+	color: $prim-text-color;
+}
+
+.nav-wrapper {
+}
+
+.nav-links {
+	@include flex(space-evenly, center, column);
+	flex: 1;
+}
+
+.nav-icon {
+	margin: 2rem;
+	padding: 1rem;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #353a3e;
+	@include flex(center, center, row);
+	@include expand();
+	@include shadow();
+}
+
+.nav-icon.active {
+	width: 7rem;
+	height: 7rem;
+}
+
+//HERO
+.hero {
+	background-image: url("../img/IMG_1135.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	min-height: 60vh;
+	overflow: hidden;
+}
+
+.hero-wrapper {
+	width: 90%;
+	margin: auto;
+	h2 {
+		font-size: 6rem;
+	}
+	h4 {
+		font-size: 3rem;
+	}
+}
+.hero-path-overlay {
+	position: absolute;
+	bottom: -5%;
+}
+
+.hero-text {
+	@include flex(center, flex-start, column);
+	padding: 10rem;
+}
