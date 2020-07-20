@@ -24,6 +24,7 @@ nav {
 	border-radius: 50%;
 	cursor: pointer;
 	background-color: #353a3e;
+	transition: all 200ms ease-in-out;
 	@include flex(center, center, row);
 	@include expand();
 	@include shadow();
@@ -32,6 +33,9 @@ nav {
 .nav-icon.active {
 	width: 7rem;
 	height: 7rem;
+	svg path {
+		fill: #5dd98a;
+	}
 }
 
 //HERO
@@ -51,9 +55,11 @@ nav {
 	margin: auto;
 	h2 {
 		font-size: 6rem;
+		z-index: 100;
 	}
 	h4 {
 		font-size: 3rem;
+		z-index: 100;
 	}
 }
 .hero-path-overlay {
@@ -65,4 +71,42 @@ nav {
 .hero-text {
 	@include flex(center, flex-start, column);
 	padding: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.hero {
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+			url("../img/IMG_1135.png");
+		background-repeat: no-repeat;
+		background-position: bottom;
+		position: relative;
+		min-height: 80vh;
+		overflow: hidden;
+		margin: 0;
+	}
+
+	.hero-wrapper {
+		width: 90%;
+		margin: auto;
+		h2 {
+			font-size: 7rem;
+		}
+		h4 {
+			font-size: 3rem;
+		}
+		h2,
+		h4 {
+			text-align: center;
+		}
+	}
+	.hero-path-overlay {
+		position: absolute;
+		bottom: -5%;
+		left: -60%;
+	}
+
+	.hero-text {
+		@include flex(center, center, column);
+		z-index: 11;
+	}
 }

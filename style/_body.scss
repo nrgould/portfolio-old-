@@ -1,13 +1,15 @@
 //WORK SECTION
 
-.work {
+.work-section {
+	margin: 0 12rem 0 12rem;
 	h1 {
 		margin: 0 0 4rem 12rem;
 	}
 }
 .work-wrapper {
-	width: 80%;
-	margin: auto;
+	margin: auto auto auto 12rem;
+	@include flex(space-evenly, space-evenly, row);
+	flex-wrap: wrap;
 }
 .work-card {
 	background-color: $dark-card-color;
@@ -24,27 +26,47 @@
 	}
 }
 
+.social-card {
+	margin-bottom: 8rem;
+	.social-icon svg {
+		width: 5rem;
+		height: auto;
+	}
+	@include flex(space-around, center, row);
+	@include expand();
+}
+
 //SHOWCASE SECTION
+
+.showcase-title {
+	margin-left: 12rem;
+	position: absolute;
+	top: -1rem;
+	left: 10%;
+	z-index: 10;
+	transform: rotateZ(8deg);
+}
 .showcase {
-	background-color: $prim-text-color;
 	// transform: rotateZ(20deg);
 	position: relative;
-	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
 	margin-bottom: 4rem;
 }
 .showcase-wrapper {
-	width: 90%;
+	background-color: $prim-text-color;
+	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
 	margin: auto;
 	height: 90vh;
 	margin-left: 9rem;
+	flex-wrap: wrap;
 	@include flex(center, center, row);
-	overflow: hidden;
+
+	// overflow: hidden;
 }
 
 .showcase-card {
 	background-color: white;
-	height: 55%;
-	width: 35%;
+	flex: 1 1 20rem;
+	width: 50%;
 	padding: 2rem;
 	margin: 0 6rem;
 	border-radius: 1rem;
@@ -54,6 +76,31 @@
 	p {
 		color: $grey-text;
 		margin-bottom: 3rem;
+	}
+	a {
+		font-size: 1.8rem;
+		font-weight: 600;
+		position: relative;
+	}
+	h3,
+	a {
+		color: $sec-text-color;
+	}
+	a::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $sec-text-color;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
+	a:hover::before {
+		visibility: visible;
+		transform: scaleX(1);
 	}
 	@include shadow();
 	@include flex(space-around, center, column);
@@ -65,4 +112,21 @@
 
 .showcase3 {
 	margin-top: 20rem;
+}
+
+@media screen and (max-width: 1000px) {
+	nav {
+		display: none;
+	}
+	.work-wrapper {
+		margin: auto;
+		@include flex(center, center, row);
+		flex-wrap: wrap;
+	}
+	.work-section {
+		margin: 0;
+		h1 {
+			text-align: center;
+		}
+	}
 }

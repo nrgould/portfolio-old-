@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="60.95" viewBox="0 0 75 60.95">
+  <defs>
+    <linearGradient id="linear-gradient" x2="0.941" y2="0.933" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a295"/>
+      <stop offset="1" stop-color="#5dd98a"/>
+    </linearGradient>
+  </defs>
+  <path id="iconmonstr-twitter-1" d="M75,9.464a30.721,30.721,0,0,1-8.838,2.422,15.412,15.412,0,0,0,6.766-8.512,30.824,30.824,0,0,1-9.772,3.734A15.4,15.4,0,0,0,36.934,21.139,43.682,43.682,0,0,1,5.222,5.064,15.407,15.407,0,0,0,9.981,25.607a15.322,15.322,0,0,1-6.966-1.925A15.4,15.4,0,0,0,15.356,38.964a15.423,15.423,0,0,1-6.95.262A15.4,15.4,0,0,0,22.781,49.91,30.938,30.938,0,0,1,0,56.285,43.56,43.56,0,0,0,23.587,63.2C52.156,63.2,68.3,39.07,67.322,17.429A31.327,31.327,0,0,0,75,9.464Z" transform="translate(0 -2.248)" fill="url(#linear-gradient)"/>
+</svg>
