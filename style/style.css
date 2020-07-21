@@ -12,6 +12,7 @@ html {
 
 body {
   background-color: #353a3e;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -106,7 +107,7 @@ nav {
           flex: 1;
 }
 
-.nav-icon {
+.nav-icon a {
   margin: 2rem;
   padding: 1rem;
   width: 6rem;
@@ -135,17 +136,17 @@ nav {
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.nav-icon:hover {
+.nav-icon a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.nav-icon.active {
+.nav-icon a.active {
   width: 7rem;
   height: 7rem;
 }
 
-.nav-icon.active svg path {
+.nav-icon a.active svg path {
   fill: #5dd98a;
 }
 
@@ -247,7 +248,7 @@ nav {
 }
 
 .work-section {
-  margin: 0 12rem 0 12rem;
+  margin: auto 12rem;
 }
 
 .work-section h1 {
@@ -298,7 +299,7 @@ nav {
 .work-card h2,
 .work-card h4,
 .work-card p {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .social-card {
@@ -348,11 +349,29 @@ nav {
   background-color: #ecfffb;
   -webkit-clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
           clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
-  margin: auto;
-  height: 90vh;
+  height: 90rem;
   margin-left: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.showcase-cards {
+  width: 80%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,12 +389,13 @@ nav {
 
 .showcase-card {
   background-color: white;
+  border: 1px solid #e8e8e8;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
   width: 50%;
   padding: 2rem;
-  margin: 0 6rem;
+  margin: 0rem 6rem;
   border-radius: 1rem;
   text-align: center;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -397,7 +417,7 @@ nav {
 .showcase-card h3,
 .showcase-card p {
   color: #2c2c2c;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .showcase-card a {
@@ -433,11 +453,110 @@ nav {
 }
 
 .showcase1 {
-  margin-bottom: 20rem;
+  margin-bottom: 15rem;
 }
 
 .showcase3 {
-  margin-top: 20rem;
+  margin-top: 15rem;
+}
+
+.skills-section {
+  width: 80%;
+  margin: auto auto auto 12rem;
+}
+
+.skills-section h1 {
+  margin-bottom: 4rem;
+  margin-left: 12rem;
+}
+
+.skills-wrapper {
+  margin-left: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.skills-column-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.skills-column-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.skills-card {
+  background-color: #272b2e;
+  border-radius: 0.6rem;
+  width: 50%;
+  height: auto;
+  padding: 5rem 4rem;
+  margin: 4rem 0rem;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skills-card h3 {
+  margin-bottom: 2rem;
+}
+
+.skills-quote {
+  opacity: 0.5;
+  width: 30%;
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {

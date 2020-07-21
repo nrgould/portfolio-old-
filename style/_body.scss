@@ -1,7 +1,7 @@
 //WORK SECTION
 
 .work-section {
-	margin: 0 12rem 0 12rem;
+	margin: auto 12rem;
 	h1 {
 		margin: 0 0 4rem 12rem;
 	}
@@ -22,7 +22,7 @@
 	h2,
 	h4,
 	p {
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -54,28 +54,33 @@
 .showcase-wrapper {
 	background-color: $prim-text-color;
 	clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
-	margin: auto;
-	height: 90vh;
+	height: 90rem;
 	margin-left: 9rem;
-	flex-wrap: wrap;
 	@include flex(center, center, row);
+	flex-wrap: wrap;
+	overflow-x: hidden;
+}
 
-	// overflow: hidden;
+.showcase-cards {
+	width: 80%;
+	margin: auto;
+	@include flex(center, center, row);
 }
 
 .showcase-card {
 	background-color: white;
+	border: 1px solid #e8e8e8;
 	flex: 1 1 20rem;
 	width: 50%;
 	padding: 2rem;
-	margin: 0 6rem;
+	margin: 0rem 6rem;
 	border-radius: 1rem;
 	text-align: center;
 	// transform: rotateZ(-20deg);
 	h3,
 	p {
 		color: $grey-text;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 	a {
 		font-size: 1.8rem;
@@ -107,11 +112,70 @@
 }
 
 .showcase1 {
-	margin-bottom: 20rem;
+	margin-bottom: 15rem;
 }
 
 .showcase3 {
-	margin-top: 20rem;
+	margin-top: 15rem;
+}
+
+// Skills Section
+
+.skills-section {
+	width: 80%;
+	margin: auto auto auto 12rem;
+	h1 {
+		margin-bottom: 4rem;
+		margin-left: 12rem;
+	}
+	// ul {
+	// 	list-style: none;
+	// 	padding: 0;
+	// }
+	// li {
+	// 	padding-left: 1.3rem;
+	// }
+	// li:before {
+	// 	content: "\f00c";
+	// 	font-family: FontAwesome;
+	// 	display: inline-block;
+	// 	margin-left: -1.3rem;
+	// 	width: 1.3rem;
+	// }
+}
+
+.skills-wrapper {
+	margin-left: 12rem;
+
+	@include flex(center, center, row);
+}
+
+.skills-column-1 {
+	@include flex(center, center, column);
+	flex: 1 1 20rem;
+}
+.skills-column-2 {
+	@include flex(center, center, column);
+	flex: 1 1 20rem;
+}
+.skills-card {
+	background-color: $dark-card-color;
+	border-radius: 0.6rem;
+	width: 50%;
+	height: auto;
+	padding: 5rem 4rem;
+	margin: 4rem 0rem;
+	h3 {
+		margin-bottom: 2rem;
+	}
+	@include shadow();
+	@include flex(center, center, column);
+}
+
+.skills-quote {
+	opacity: 0.5;
+	width: 30%;
+	text-align: center;
 }
 
 @media screen and (max-width: 1000px) {

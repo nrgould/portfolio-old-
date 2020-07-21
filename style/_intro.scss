@@ -16,7 +16,7 @@ nav {
 	flex: 1;
 }
 
-.nav-icon {
+.nav-icon a {
 	margin: 2rem;
 	padding: 1rem;
 	width: 6rem;
@@ -30,7 +30,7 @@ nav {
 	@include shadow();
 }
 
-.nav-icon.active {
+.nav-icon a.active {
 	width: 7rem;
 	height: 7rem;
 	svg path {
